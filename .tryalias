@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+function tryalias() { 
+    alias_name=$1
+    shift
+    for f in "$@" ; do
+        first_word=$(echo "$f" | cut -d ' ' -f1)
+        if type "$first_word" >/dev/null 2>&1 ; then 
+            alias $alias_name="$(echo $f)"
+            break
+        fi
+    done
+    # TODO print error if alias could not be created
+}

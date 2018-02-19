@@ -1,0 +1,4 @@
+if [ -f "$HOME/.tryalias" ] ; then
+    . "$HOME/.tryalias"
+    . "$HOME/.aliases"
+fi
