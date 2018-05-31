@@ -6,10 +6,13 @@ Aliases with fallbacks.
 
 The `tryalias` command works like `alias`, but it sequentially checks
 each of its multiple arguments until it finds a valid command.
+If no argument is found, alias the first argument to the last argument.
 
 ## Installation
 
 ### bash or zsh
+
+Place your tryalias commands in `~/.aliases`.
 
 ```
 $ cp .tryalias ~
@@ -18,6 +21,7 @@ $ cat bashrc-sample >> ~/.bashrc
 
 ### csh
 
+In csh, `tryalias` is an alias for `alias`.
 See `cshrc-sample`.
 
 ## Usage
@@ -26,7 +30,8 @@ See `cshrc-sample`.
 tryalias please sudo
 
 # Use previously defined aliases
-tryalias l "ls -Fa"
+tryalias exa "exa --git"
+tryalias l "exa -Fa" "ls -Fa"
 tryalias ll "l -lh"
 
 # Confirm overwrites and deletions
