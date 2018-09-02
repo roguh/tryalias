@@ -1,0 +1,8 @@
+function load_file
+    if test -e $argv[1]
+        source $argv[1]
+    end
+end
+
+# Load aliases
+load_file $HOME/.aliases

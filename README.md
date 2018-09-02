@@ -10,6 +10,12 @@ If no argument is found, alias the first argument to the last argument.
 
 ## Installation
 
+### fish
+
+Place your tryalias commands in `~/.aliases`.
+Copy `tryalias.fish` to `~/.config/fish/functions/` and source `~/.aliases`
+in your `config.fish`. See `config.fish-sample`.
+
 ### bash or zsh
 
 Place your tryalias commands in `~/.aliases`.
@@ -20,6 +26,8 @@ $ cat bashrc-sample >> ~/.bashrc
 ```
 
 ### csh
+
+Place your tryalias commands in `~/.aliases`.
 
 In csh, `tryalias` is an alias for `alias`.
 See `cshrc-sample`.
